@@ -1,4 +1,11 @@
 /* Your app custom styles here */
+html{
+  height: 100%;
+}
+body {
+  min-height: 95vh;
+}
+
 .myGrid{
   background: rgb(255, 255, 255);
   text-align: center;
@@ -6,14 +13,21 @@
   border: 1px solid rgb(221, 221, 221);
   padding: 5px;
   font-size: 12px;
+  width: 200px;
   }
 
 .spaceLol{
   padding-top: 10px;
+  
   }
 
 .centrar{
   text-align: center;
+  width: 100%;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  display: none;
 }
 
 /* poppins-regular - latin */

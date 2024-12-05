@@ -77,7 +77,13 @@ $$(document).on('page:init', '.page[data-name="stock"]', function (e) {
         console.log(productos)
         productos.append(`<div class="grid grid-cols-2 grid-gap spaceLol">
                 <div class=" myGrid">${doc.data().name}</div>
-                <div class="myGrid"><input class="centrar" type="number" min="0" max="1000" step="1" placeholder="Cantidad"></div>`)
+                <div class="item-inner">
+                  <div class="item-input-wrap">
+                    <input class="centrar" type="number" placeholder="Cantidad">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+        </div>`)
       })
     })
 
@@ -90,15 +96,189 @@ $$(document).on('page:init', '.page[data-name="stock"]', function (e) {
         console.log(productos2)
         productos2.append(`<div class="grid grid-cols-2 grid-gap spaceLol">
                 <div class=" myGrid">${doc.data().name}</div>
-                <div class="stepper stepper-fill stepper-init">
-          <div class="stepper-button-minus"></div>
-          <div class="stepper-input-wrap">
-            <input type="text" value="0" min="0" max="1000" step="1" />
-          </div>
-          <div class="stepper-button-plus"></div>
+                <div class="item-inner">
+                  <div class="item-input-wrap">
+                    <input class="centrar" type="number" placeholder="Cantidad">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
         </div>`)
       })
     })
+
+    var docRef = db.collection("panes")
+    var productos3 = $$("#panesCont");
+
+    docRef.get().then((querySnapshot)=>{
+      querySnapshot.forEach((doc)=>{
+        console.log(doc.id,": ", doc.data())
+        console.log(productos3)
+        productos3.append(`<div class="grid grid-cols-2 grid-gap spaceLol">
+                <div class=" myGrid">${doc.data().name}</div>
+                <div class="item-inner">
+                  <div class="item-input-wrap">
+                    <input class="centrar" type="number" placeholder="Cantidad">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+        </div>`)
+      })
+    })
+
+    var docRef = db.collection("aderezosK")
+    var productos4 = $$("#adKCont");
+
+    docRef.get().then((querySnapshot)=>{
+      querySnapshot.forEach((doc)=>{
+        console.log(doc.id,": ", doc.data())
+        console.log(productos4)
+        productos4.append(`<div class="grid grid-cols-2 grid-gap spaceLol">
+                <div class=" myGrid">${doc.data().name}</div>
+                <div class="item-inner">
+                  <div class="item-input-wrap">
+                    <input class="centrar" type="number" placeholder="Cantidad">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+        </div>`)
+      })
+    })
+
+    var docRef = db.collection("aderezosP")
+    var productos5 = $$("#adPorCont");
+
+    docRef.get().then((querySnapshot)=>{
+      querySnapshot.forEach((doc)=>{
+        console.log(doc.id,": ", doc.data())
+        console.log(productos5)
+        productos5.append(`<div class="grid grid-cols-2 grid-gap spaceLol">
+                <div class=" myGrid">${doc.data().name}</div>
+                <div class="item-inner">
+                  <div class="item-input-wrap">
+                    <input class="centrar" type="number" placeholder="Cantidad">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+        </div>`)
+      })
+    })
+
+    var docRef = db.collection("papelera")
+    var productos6 = $$("#papeleraCont");
+
+    docRef.get().then((querySnapshot)=>{
+      querySnapshot.forEach((doc)=>{
+        console.log(doc.id,": ", doc.data())
+        console.log(productos6)
+        productos6.append(`<div class="grid grid-cols-2 grid-gap spaceLol">
+                <div class=" myGrid">${doc.data().name}</div>
+                <div class="item-inner">
+                  <div class="item-input-wrap">
+                    <input class="centrar" type="number" placeholder="Cantidad">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+        </div>`)
+      })
+    })
+
+    var docRef = db.collection("cafeteria")
+    var productos7 = $$("#cofeCont");
+
+    docRef.get().then((querySnapshot)=>{
+      querySnapshot.forEach((doc)=>{
+        console.log(doc.id,": ", doc.data())
+        console.log(productos7)
+        productos7.append(`<div class="grid grid-cols-2 grid-gap spaceLol">
+                <div class=" myGrid">${doc.data().name}</div>
+                <div class="item-inner">
+                  <div class="item-input-wrap">
+                    <input class="centrar" type="number" placeholder="Cantidad">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+        </div>`)
+      })
+    })
+
+    var docRef = db.collection("bebidas")
+    var productos8 = $$("#bbidaCont");
+
+    docRef.get().then((querySnapshot)=>{
+      querySnapshot.forEach((doc)=>{
+        console.log(doc.id,": ", doc.data())
+        console.log(productos8)
+        productos8.append(`<div class="grid grid-cols-2 grid-gap spaceLol">
+                <div class=" myGrid">${doc.data().name}</div>
+                <div class="item-inner">
+                  <div class="item-input-wrap">
+                    <input class="centrar" type="number" placeholder="Cantidad">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+        </div>`)
+      })
+    })
+
+    var docRef = db.collection("aguas")
+    var productos9 = $$("#aguasCont");
+
+    docRef.get().then((querySnapshot)=>{
+      querySnapshot.forEach((doc)=>{
+        console.log(doc.id,": ", doc.data())
+        console.log(productos9)
+        productos9.append(`<div class="grid grid-cols-2 grid-gap spaceLol">
+                <div class=" myGrid">${doc.data().name}</div>
+                <div class="item-inner">
+                  <div class="item-input-wrap">
+                    <input class="centrar" type="number" placeholder="Cantidad">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+        </div>`)
+      })
+    })
+
+    var docRef = db.collection("Cerveza")
+    var productos10 = $$("#cervezaCont");
+
+    docRef.get().then((querySnapshot)=>{
+      querySnapshot.forEach((doc)=>{
+        console.log(doc.id,": ", doc.data())
+        console.log(productos10)
+        productos10.append(`<div class="grid grid-cols-2 grid-gap spaceLol">
+                <div class=" myGrid">${doc.data().name}</div>
+                <div class="item-inner">
+                  <div class="item-input-wrap">
+                    <input class="centrar" type="number" placeholder="Cantidad">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+        </div>`)
+      })
+    })
+
+    var docRef = db.collection("varios")
+    var productos11 = $$("#variosCont");
+
+    docRef.get().then((querySnapshot)=>{
+      querySnapshot.forEach((doc)=>{
+        console.log(doc.id,": ", doc.data())
+        console.log(productos11)
+        productos11.append(`<div class="grid grid-cols-2 grid-gap spaceLol">
+                <div class=" myGrid">${doc.data().name}</div>
+                <div class="item-inner">
+                  <div class="item-input-wrap">
+                    <input class="centrar" type="number" placeholder="Cantidad">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+        </div>`)
+      })
+    })
+
+
+
 })
 
 
